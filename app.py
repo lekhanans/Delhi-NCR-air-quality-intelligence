@@ -283,6 +283,319 @@ st.markdown("""
         padding-top: 18px;
         border-top: 1px solid #1f2226;
     }
+
+    :root {
+        --text-primary: #111827;
+        --text-heading: #1f2937;
+        --text-body: #374151;
+        --text-secondary: #4b5563;
+        --text-muted: #6b7280;
+        --text-on-dark: #f9fafb;
+        --text-on-light: #111827;
+        --border-color: #d9dde2;
+        --surface: #ffffff;
+        --surface-secondary: #f3f4f6;
+        --sidebar-background: #2c4355;
+    }
+
+    .stApp {
+        background-color: var(--surface-secondary);
+        color: var(--text-body);
+    }
+
+    section[data-testid="stSidebar"] {
+        background-color: var(--sidebar-background);
+        border-right-color: var(--border-color);
+    }
+
+    section[data-testid="stSidebar"],
+    section[data-testid="stSidebar"] * {
+        color: var(--text-on-dark);
+    }
+
+    section[data-testid="stSidebar"] .stRadio label,
+    section[data-testid="stSidebar"] h1,
+    section[data-testid="stSidebar"] h2,
+    section[data-testid="stSidebar"] h3,
+    section[data-testid="stSidebar"] p,
+    section[data-testid="stSidebar"] span {
+        color: var(--text-on-dark) !important;
+    }
+
+    .main h1,
+    .main h2,
+    .main h3,
+    .main h4,
+    .main h5,
+    .main h6,
+    .main .platform-header h1,
+    .main .section-title,
+    .main .status-text-title {
+        color: var(--text-primary) !important;
+    }
+
+    .platform-header,
+    .panel,
+    .kpi-card,
+    div[data-testid="stMetric"],
+    .status-banner {
+        background: var(--surface);
+        border-color: var(--border-color);
+    }
+
+    .main p,
+    .main label,
+    .main .panel,
+    .main .panel p,
+    .main .panel span,
+    .main .panel label,
+    .main .status-text-body,
+    .main .stSlider label,
+    .main .stSelectbox label,
+    .main .stNumberInput label {
+        color: var(--text-body) !important;
+    }
+
+    .main .platform-header .subtitle,
+    .main .kpi-label,
+    .main .kpi-unit,
+    .main .kpi-delta,
+    .main [data-testid="stCaptionContainer"],
+    .main [data-testid="stCaptionContainer"] * {
+        color: var(--text-muted) !important;
+    }
+
+    .main .kpi-value,
+    .main div[data-testid="stMetricValue"],
+    .main div[data-testid="stMetric"] {
+        color: var(--text-on-light) !important;
+    }
+
+    .main [style*="color:#f8fafc"],
+    .main [style*="color:#e5e7eb"],
+    .main [style*="color:#cbd5e1"],
+    .main [style*="color:#a9b2bd"],
+    .main [style*="color:#8b95a1"] {
+        color: var(--text-body) !important;
+    }
+
+    .main [data-testid="stAlert"] {
+        color: var(--text-body) !important;
+    }
+
+    .main [data-testid="stAlert"] p,
+    .main [data-testid="stAlert"] span,
+    .main [data-testid="stAlert"] div {
+        color: var(--text-body) !important;
+    }
+
+    .main .stButton > button {
+        background: #131518 !important;
+        color: var(--text-on-dark) !important;
+        border-color: #2c3138 !important;
+    }
+
+    .main .stButton > button span {
+        color: var(--text-on-dark) !important;
+    }
+
+    .main .badge[style*="#2ecc71"] {
+        color: #166534 !important;
+    }
+
+    .main .badge[style*="#f1c40f"] {
+        color: #854d0e !important;
+    }
+
+    .main .badge[style*="#e67e22"] {
+        color: #9a3412 !important;
+    }
+
+    .main .badge[style*="#e74c3c"] {
+        color: #991b1b !important;
+    }
+
+    .footer-note {
+        color: var(--text-muted) !important;
+        border-top-color: var(--border-color);
+    }
+
+    /* Direct selectors keep custom HTML and Streamlit widgets readable. */
+    .platform-header h1,
+    .platform-header h1 span {
+        color: var(--text-primary) !important;
+        font-size: 34px !important;
+        font-weight: 700 !important;
+    }
+
+    .platform-header .subtitle {
+        color: var(--text-secondary) !important;
+        font-size: 17px !important;
+        font-weight: 500 !important;
+    }
+
+    .section-title {
+        color: var(--text-heading) !important;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+    }
+
+    .kpi-label {
+        color: var(--text-heading) !important;
+        font-size: 15px !important;
+        font-weight: 600 !important;
+    }
+
+    .kpi-value,
+    .kpi-card .kpi-value,
+    .kpi-card .kpi-value span:not(.badge) {
+        color: #111111 !important;
+        font-size: 36px !important;
+        font-weight: 700 !important;
+    }
+
+    .kpi-unit,
+    .kpi-card .kpi-unit {
+        color: var(--text-secondary) !important;
+        font-size: 15px !important;
+        font-weight: 500 !important;
+    }
+
+    .kpi-delta,
+    .kpi-card .kpi-delta {
+        color: var(--text-secondary) !important;
+    }
+
+    .platform-header,
+    .panel,
+    .kpi-card,
+    .status-banner,
+    div[data-testid="stMetric"] {
+        color: var(--text-body) !important;
+    }
+
+    .platform-header [style*="color:"],
+    .panel [style*="color:"],
+    .kpi-card [style*="color:"] {
+        color: var(--text-body) !important;
+    }
+
+    .platform-header h1,
+    .panel h1,
+    .panel h2,
+    .panel h3,
+    .panel h4,
+    .panel p,
+    .panel span,
+    .panel div,
+    .kpi-card div,
+    .kpi-card span {
+        color: var(--text-body) !important;
+    }
+
+    .platform-header h1,
+    .kpi-card .kpi-value {
+        color: #111111 !important;
+    }
+
+    .kpi-card .kpi-label {
+        color: var(--text-heading) !important;
+    }
+
+    .kpi-card .kpi-unit {
+        color: var(--text-secondary) !important;
+    }
+
+    [data-testid="stSlider"] label,
+    [data-testid="stSlider"] label p,
+    [data-testid="stSlider"] [data-testid="stMarkdownContainer"] p,
+    [data-testid="stSlider"] [data-baseweb="slider"] ~ div,
+    [data-testid="stSlider"] [role="slider"] {
+        color: var(--text-body) !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+    }
+
+    [data-testid="stSlider"] [data-testid="stMarkdownContainer"] p {
+        color: var(--text-body) !important;
+    }
+
+    [data-testid="stSlider"] [data-testid="stThumbValue"],
+    [data-testid="stSlider"] [data-testid="stSliderThumbValue"],
+    [data-testid="stSlider"] [data-baseweb="slider"] div {
+        color: var(--text-body) !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+    }
+
+    [data-testid="stSlider"] [data-baseweb="slider"] {
+        color: var(--text-body) !important;
+    }
+
+    [data-testid="stCaptionContainer"],
+    [data-testid="stCaptionContainer"] *,
+    [data-testid="stAlert"],
+    [data-testid="stAlert"] * {
+        color: var(--text-body) !important;
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+    }
+
+    .stButton > button,
+    .stButton > button p,
+    .stButton > button span {
+        background: #131518 !important;
+        color: var(--text-on-dark) !important;
+        font-size: 15px !important;
+        font-weight: 600 !important;
+    }
+
+    section[data-testid="stSidebar"] .stRadio label,
+    section[data-testid="stSidebar"] .stRadio label p {
+        color: var(--text-on-dark) !important;
+        font-size: 16px !important;
+    }
+
+    .status-text-title {
+        color: var(--text-heading) !important;
+    }
+
+    .badge[style*="#2ecc71"] {
+        color: #166534 !important;
+    }
+
+    .badge[style*="#f1c40f"] {
+        color: #854d0e !important;
+    }
+
+    .badge[style*="#e67e22"] {
+        color: #9a3412 !important;
+    }
+
+    .badge[style*="#e74c3c"] {
+        color: #991b1b !important;
+    }
+
+    .status-text-title[style*="#2ecc71"] {
+        color: #166534 !important;
+    }
+
+    .status-text-title[style*="#f1c40f"] {
+        color: #854d0e !important;
+    }
+
+    .status-text-title[style*="#e67e22"] {
+        color: #9a3412 !important;
+    }
+
+    .status-text-title[style*="#e74c3c"] {
+        color: #991b1b !important;
+    }
+
+    .status-text-body {
+        color: var(--text-body) !important;
+        font-size: 15px !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
